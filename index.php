@@ -86,7 +86,7 @@
         <link rel="stylesheet" href="css/jquery-ui.min.css">
 	</head>
 	<body>
-        <input id="textto3d" type="text" style="display:none" value="<?php if(isset($_GET['text'])) echo $_GET['text']; ?>"/>
+        
 		<div class="wrap">
 			<div class="content">
 				c o d e : <a target="_blank" href="http://twitter.com/antistar999">k a p o</a> | 
@@ -195,9 +195,9 @@
 
 				}
                 // TEXT
-                textto = $('#textto3d').val();
-                if(textto.length<2)
-                    textto = 'DUMMY TEXT PHO PHUN';
+                //textto = $('#textto3d').val();
+                //if(textto.length<2)
+                textto = 'DUMMY TEXT PHO PHUN';
                 var shape = new THREE.TextGeometry(textto);
                 var wrapper = new THREE.MeshBasicMaterial({color: 0xaaaaaa, font: 'helvetiker'});
                 var words = new THREE.Mesh(shape, wrapper);
