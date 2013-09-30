@@ -3,10 +3,9 @@
 	<head>
 		<title>NOTHING HERE YET</title>
 		<meta charset="utf-8" />
-		<link href='http://fonts.googleapis.com/css?family=Titillium+Web:700' rel='stylesheet' type='text/css'>
-    
+		<link href='http://fonts.googleapis.com/css?family=Titillium+Web:700' rel='stylesheet' type='text/css'/>
 		<style>
-			body {
+		    body {
 				margin: 0px;
 				background-color: #000000;
 				overflow: hidden;
@@ -214,7 +213,10 @@
                 plight = new THREE.PointLight( 0xffffff, 0, 1500 );
                 plight.position.set( 10, 10, 550 );
                 scene.add( plight );
-
+                
+                textlight = new THREE.PointLight(0xffffff, 0.3, 300);
+                textlight.position.set(-20,-100,0);
+                scene.add( textlight);
 				// postprocessing
 
 				composer = new THREE.EffectComposer( renderer );
