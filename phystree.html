@@ -38,13 +38,14 @@
             'use strict';
 			var scene, renderer, composer, controls;
 			var object, light, bscroll, scale, tense, action,bg, camera, scene, use_bg, particleSystem;
-			var loader, textto, mesh, plight, textlight, meshez;
+			var loader, textto, mesh, plight, textlight, meshe, cntr;
 			
         	Physijs.scripts.worker = 'js/physijs_worker.js';
         	Physijs.scripts.ammo = 'ammo.js';
         	
             scale = 1;
             tense = 1;
+            cntr=0;
             action = true;
             use_bg = true;
 			init();
@@ -169,9 +170,12 @@
                
 			   requestAnimationFrame( animate );
 			   render();
-			   
+			   cntr++;
 			}
-			
+		setInterval(function(){
+			console.log(cntr);
+			cntr=0;
+		},1000);
 		    function render()
 			{
 			    renderer.autoClear = false;
