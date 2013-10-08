@@ -97,6 +97,7 @@
 		<script src="js/three.min.js"></script>
         <script src="js/shaders/FXAAShader.js"></script>
 		<script src="js/shaders/CopyShader.js"></script>
+		<script src="js/controls/OrbitControls.js"></script>
 		<script src="js/shaders/ConvolutionShader.js"></script>
 		<script src="js/shaders/DotScreenShader.js"></script>
 		<script src="js/shaders/HorizontalBlurShader.js"></script>
@@ -137,7 +138,7 @@
 				renderer.autoClear = false;
 				camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 1, 1000 );
 				camera.position.z = 400;
-
+				 controls = new THREE.OrbitControls( camera );
 				scene = new THREE.Scene();
 
                 // BACKGROUND
